@@ -7,6 +7,7 @@ import java.util.List;
 public class UsuarioService {
     private List<Usuario> usuariosCadastrados = new ArrayList<>();
 
+
     private static int sequence = 1;
 
     private void setId(Usuario usuario) {
@@ -18,7 +19,7 @@ public class UsuarioService {
         usuariosCadastrados.add(usuario);
     }
     public void removerUsuario (Usuario usuario){
-        usuariosCadastrados.remove(usuario.getId());
+        usuariosCadastrados.remove(usuario);
     }
     public Usuario localizaPorId (long id){
         for (Usuario usuario : usuariosCadastrados){
@@ -27,5 +28,8 @@ public class UsuarioService {
             }
         }
         return null;
+    }
+    public List<Usuario> listarTodos(){
+        return usuariosCadastrados;
     }
 }

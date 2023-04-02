@@ -16,13 +16,13 @@ public class LivroService {
 
     public void adicionarLivro (Livro livro) throws IllegalArgumentException{
         if (livro.getNome() == null){
-            throw new IllegalArgumentException("Você precisa adicionar o nome do livro");
+            throw new IllegalArgumentException("Você precisa informar o nome do livro");
         }
         setId(livro);
         livrosCadastrados.add(livro);
     }
     public void removerLivro (Livro livro){
-        livrosCadastrados.remove(livro.getId());
+        livrosCadastrados.remove(livro);
     }
     public List<Livro> listarTodos (){
         return livrosCadastrados;
