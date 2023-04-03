@@ -1,9 +1,12 @@
 package service;
 
+import model.Livro;
 import model.Usuario;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UsuarioServiceTest {
@@ -68,4 +71,6 @@ public class UsuarioServiceTest {
         //then
         assertNull(usuarioLocalizado);
     }
+
+
 }

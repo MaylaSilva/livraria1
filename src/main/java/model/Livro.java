@@ -1,9 +1,12 @@
 package model;
 
+import java.util.List;
+
 public class Livro {
     private long id;
     private String nome;
     private String autor;
+    private List<Usuario> compradores;
 
     public long getId() {
         return id;
@@ -27,6 +30,14 @@ public class Livro {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public List<Usuario> getCompradores() {
+        return compradores;
+    }
+
+    public void setCompradores(List<Usuario> compradores) {
+        this.compradores = compradores;
     }
 
     public Livro() {

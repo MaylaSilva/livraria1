@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 public class Usuario {
     private long id;
     private String nome;
@@ -7,6 +9,7 @@ public class Usuario {
     private String cpf;
     private String Usuario;
     private String senha;
+    private List<Livro> livros;
 
     public long getId() {
         return id;
@@ -54,6 +57,14 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public List<Livro> getLivros() {
+        return livros;
+    }
+
+    public void setLivros(List<Livro> livros) {
+        this.livros = livros;
     }
 
     public Usuario() {
